@@ -28,7 +28,7 @@ const schema = {
 
 const pluginName = 'webpack-spago-loader'
 
-function parseOpitons(options) {
+function parseOptions(options) {
   validateOptions(schema, options, pluginName)
 
   const output = options.output ? options.output : getOutputDirFromSpago()
@@ -76,4 +76,4 @@ function parseOpitons(options) {
   return { compiler, compilerArgs, pursFiles, pursAndJsFiles }
 }
 
-module.exports = parseOpitons
+module.exports = parseOptions
